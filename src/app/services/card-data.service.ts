@@ -13,6 +13,7 @@ export class CardDataService {
     containerTitle: 'Active card details',
     status: 'closed',
     active: false,
+    disabled: false
   });
 
   cardData$ = this.cardData.asObservable();

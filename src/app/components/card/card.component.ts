@@ -10,5 +10,6 @@ export class CardComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
   @Input() counter: number = 0;
-  @Input() isActive = false;
+  @Input() disabled = true;
+  @Input() active = false;
 }

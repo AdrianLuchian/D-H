@@ -15,19 +15,19 @@ import {
 export class CardActiveDirective {
   @Input() activeClass: string = 'active';
   @Input() disabled: boolean = false;
-  @Input() isActive: boolean = false;
+  @Input() active: boolean = false;
 
   @Output() activeChange = new EventEmitter<boolean>();
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['isActive']) {
+    if (changes['active']) {
       this.updateClass();
     }
 
     if (changes['disabled'] && this.disabled) {
-      this.isActive = false;
+      this.active = false;
       this.updateClass();
     }
   }
@@ -39,13 +39,13 @@ export class CardActiveDirective {
       return;
     }
 
-    this.isActive = true;
+    this.active = true;
     this.updateClass();
-    this.activeChange.emit(this.isActive);
+    this.activeChange.emit(this.active);
   }
 
   private updateClass() {
-    if (this.isActive) {
+    if (this.active) {
       this.renderer.addClass(this.el.nativeElement, this.activeClass);
     } else {
       this.renderer.removeClass(this.el.nativeElement, this.activeClass);

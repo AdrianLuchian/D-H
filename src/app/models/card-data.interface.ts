@@ -7,4 +7,5 @@ export interface CardData {
     containerTitle: string;
     status: CardStatus;
     active: boolean;
+    disabled: boolean;
 }

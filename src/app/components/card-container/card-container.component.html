@@ -3,7 +3,8 @@
 
     <div class="card-container">
         <app-card appCardActive 
-            [isActive]="cardData.active" 
+            [active]="cardData.active"
+            [disabled]="cardData.disabled" 
             [title]="cardData.title"
             [subtitle]="cardData.subtitle"
             [counter]="cardData.counter"

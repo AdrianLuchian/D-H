@@ -86,6 +86,7 @@
 .mat-card.custom-card.disabled {
   background: #757575;
   box-shadow: none;
+  pointer-events: none;
 }
 
 // custom state -> active (clicked)
