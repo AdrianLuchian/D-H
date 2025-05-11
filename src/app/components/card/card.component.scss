@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-::ng-deep .mat-card {
+.mat-card.custom-card {
     padding: 16px;
     background-color: #2E5DA4;
     height: 114px;
@@ -11,27 +11,28 @@
     z-index: 3;
   }
 
-  .mat-card-image {
-    height: 90px;
-    object-fit: cover;
+  .mat-card-title.custom-card-title {
+    margin-bottom: 0;
   }
 
-  .mat-card-title {
-    min-height: 40px !important;
+  .mat-card-subtitle.custom-card-subtitle {
     margin-bottom: 0;
-    margin: 16px 0;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+  }
+
+  .mat-card-content.custom-card-content {
+    margin-bottom: 0;
   }
   
   .mat-card-image {
-    width: calc(100% + 48px);
-    margin: 0 -24px 16px -24px;
-
-    &:first-child {
-      margin-bottom: 0;
-    }
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    color: white;
+    opacity: .2;
+    font-size: 56px;
+    width: auto;
+    height: auto;
+    margin: 0;
   }
 
   &.mat-ripple {
@@ -40,36 +41,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    >.mat-card-title {
-      min-height: 24px;
-      align-self: flex-start;
-      max-width: 75%;
-      line-height: 20px;
-      margin-bottom: 4px;
-      font-size: 16px;
-    }
-
-    >.mat-card-subtitle {
-      margin-bottom: 0;
-      font-size: 12px;
-      color: inherit;
-    }
-
-    >.mat-card-content {
-      width: 100%;
-    }
-
-    >.mat-icon {
-      position: absolute;
-      bottom: -12px;
-      right: 0;
-      color: white;
-      opacity: .2;
-      font-size: 50px;
-      width: auto;
-      height: auto;
-    }
   }
 
 }

@@ -2,4 +2,23 @@
     width: 580px;
     border: 1px solid;
     padding: 24px;
+    position: relative;
+    overflow: hidden;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mat-card-image {
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    opacity: .2;
+    font-size: 56px;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
 }

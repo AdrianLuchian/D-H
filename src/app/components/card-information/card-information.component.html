@@ -1,14 +1,29 @@
-<div *ngIf="visible" class="card-information">
-    <h1>{{ title }} <mat-icon  (click)="closeCardInformation()" class="close-icon">close</mat-icon></h1>
-   
-    Please detach component and add the content that you need. The icon from the bottom should be the same with the icon from cluster card that is active
-    <br />
-    Please detach component and add the content that you need. The icon from the bottom should be the same with the icon from cluster card that is active
-  
-    <br />
-    <br />
-    Please detach component and add the content that you need. The icon from the bottom should be the same with the icon from cluster card that is active
-    Please detach component and add the content that you need. The icon from the bottom should be the same with the icon from cluster card that is active
-    Please detach component and add the content that you need.
-    <mat-icon>file_copy</mat-icon>
-</div>
+<ng-container *ngIf="visible">
+    <div class="card-information">
+        <div class="header">
+            <h1>{{ title }}</h1>
+            <mat-icon (click)="closeCardInformation()" class="close-icon">close</mat-icon>
+        </div>
+
+        <div class="content">
+            Please detach component and add the content that you need. The icon from the bottom should be the same with
+            the
+            icon from cluster card that is active
+            <br />
+            Please detach component and add the content that you need. The icon from the bottom should be the same with
+            the
+            icon from cluster card that is active
+
+            <br />
+            <br />
+            Please detach component and add the content that you need. The icon from the bottom should be the same with
+            the
+            icon from cluster card that is active
+            Please detach component and add the content that you need. The icon from the bottom should be the same with
+            the
+            icon from cluster card that is active
+            Please detach component and add the content that you need.
+        </div>
+        <mat-icon class="mat-card-image material-icons-outlined">file_copy</mat-icon>
+    </div>
+</ng-container>
