@@ -1,12 +1,16 @@
 <mat-card color="accent" matRipple class="custom-card">
-  <mat-card-title class="custom-card-title">
-    {{ title }}
-  </mat-card-title>
-  <mat-card-subtitle class="custom-card-subtitle">
-    {{ subtitle }}
-  </mat-card-subtitle>
-  <mat-card-content class="custom-card-content">
-    {{ counter }}
-  </mat-card-content>
+  <div class="flexbox-container-row">
+    <div class="flexbox-container-col">
+      <mat-card-title class="custom-card-title">
+        {{ title }}
+      </mat-card-title>
+      <mat-card-subtitle class="custom-card-subtitle">
+        {{ subtitle }}
+      </mat-card-subtitle>
+    </div>
+    <div class="counter">
+      {{ counter }}
+    </div>
+  </div>
   <mat-icon class="mat-card-image material-icons-outlined">file_copy</mat-icon>
 </mat-card>

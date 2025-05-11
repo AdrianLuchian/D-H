@@ -7,8 +7,8 @@ import { CardData } from '../models/card-data.interface';
 })
 export class CardDataService {
   private cardData = new BehaviorSubject<CardData>({
-    title: 'Title',
-    subtitle: 'Subtitle',
+    title: 'Title 2.2',
+    subtitle: 'Content',
     counter: 0,
     containerTitle: 'Title Container',
     status: 'closed',
