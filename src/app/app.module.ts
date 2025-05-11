@@ -11,13 +11,19 @@ import {MatRippleModule} from '@angular/material/core';
 import { DisplayComponent } from './components/display/display.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CardInformationComponent } from './components/card-information/card-information.component';
+import { CardContainerComponent } from './components/card-container/card-container.component';
+import { CardActiveDirective } from './directives/card-active.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    DisplayComponent
+    DisplayComponent,
+    CardInformationComponent,
+    CardContainerComponent,
+    CardActiveDirective
   ],
   imports: [
     BrowserModule,
