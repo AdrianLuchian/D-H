@@ -8,11 +8,9 @@
     width: 214px;
     height: 81x;
     border-radius: 4px;
-  
-  &.cdk-drag-dragging {
-    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
-    z-index: 3;
-  }
+    box-shadow: 0px 1px 3px 0px #00000033;
+    box-shadow: 0px 2px 1px 0px #0000001F;
+    box-shadow: 0px 1px 1px 0px #00000024;
 
   .mat-card-title.custom-card-title {
     color: white;
@@ -76,4 +74,25 @@
   height: 41px;
   gap: 8px;
 }
+
+
+// native states -> default, hover, disabled
+// hover
+.mat-card.custom-card:hover {
+  background: #3663a8;
+}
+
+// disabled
+.mat-card.custom-card.disabled {
+  background: #757575;
+  box-shadow: none;
+}
+
+// custom state -> active (clicked)
+// active
+.mat-card.custom-card.active {
+  background: #4770af;
+  border: 2px solid #FFFFFF;
+}
+
 
