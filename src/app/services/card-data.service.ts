@@ -10,7 +10,7 @@ export class CardDataService {
     title: 'Title 2.2',
     subtitle: 'Content',
     counter: 0,
-    containerTitle: 'Title Container',
+    containerTitle: 'Active card details',
     status: 'closed',
     active: false,
   });
