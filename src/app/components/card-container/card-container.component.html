@@ -1,6 +1,6 @@
-<div *ngIf="cardData$ | async as cardData">
+<ng-container *ngIf="cardData$ | async as cardData">
     <div class="card-container">
         <app-card [title]="cardData.title" [subtitle]="cardData.subtitle" [counter]="cardData.counter"></app-card>
         <app-card-information [title]="cardData.containerTitle"></app-card-information>
     </div>
-</div>
+</ng-container>

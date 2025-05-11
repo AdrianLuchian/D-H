@@ -1,14 +1,18 @@
-<div class="card-configuration">
-  <mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Title Input</mat-label>
-    <input matInput type="text" >
-  </mat-form-field>
-  <mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Subtitle Input</mat-label>
-    <input matInput type="text" >
-  </mat-form-field>
-  <mat-form-field class="example-form-field" appearance="fill">
-    <mat-label>Title container Input</mat-label>
-    <input matInput type="text" >
-  </mat-form-field>
-</div>
+<ng-container *ngIf="cardData$ | async as cardData">
+  <div class="card-configuration">
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Title Input</mat-label>
+      <input matInput type="text" [value]="cardData.title" (input)="updateTitle($event)">
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Subtitle Input</mat-label>
+      <input matInput type="text" [value]="cardData.subtitle" (input)="updateSubtitle($event)">
+    </mat-form-field>
+
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Title Container Input</mat-label>
+      <input matInput type="text" [value]="cardData.containerTitle" (input)="updateContainerTitle($event)">
+    </mat-form-field>
+  </div>
+</ng-container>
