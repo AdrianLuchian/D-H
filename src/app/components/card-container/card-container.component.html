@@ -1,4 +1,6 @@
 <ng-container *ngIf="cardData$ | async as cardData">
+    <p>Status mat-card: <b>{{ cardData.status }}</b></p>
+
     <div class="card-container">
         <app-card appCardActive 
             [isActive]="cardData.active" 

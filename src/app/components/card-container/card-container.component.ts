@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardStatus } from 'src/app/models/card-data.interface';
 import { CardDataService } from 'src/app/services/card-data.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class CardContainerComponent {
   constructor(private cardDataService: CardDataService) {}
 
   updateActive(isActive: boolean) {
-    this.cardDataService.updateCardData({ active: isActive });
+    const status: CardStatus = isActive ? 'open' : 'closed';
+    this.cardDataService.updateCardData({ active: isActive, status });
   }
 }
