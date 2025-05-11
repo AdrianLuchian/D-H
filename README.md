@@ -1,27 +1,25 @@
-# TestProject
+# D&H Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+Improvements:
+ - avoid injecting material icons in index.html -> its not optimal as it prevents tree shaking -> configure icons at build time.
+ - avoid using ngDeep -> ngDeep is depreacted and breaks component encapsulation. 
+ - minimize the use of !important -> use only IF neccessary to avoid specifity issues.
+ - I would recommend tailwindCSS utilities - non-semantic css - avoid css duplication.
 
-## Development server
+components:
+ - card-configuration - group inputs and set values via card data service.
+ - card container - hold card + card-information and read values from card data service.
+ - card - dumb component (onPush) only display values
+ - card-information - dumb component (onPush) only display values
+ 
+state management
+ - card-data.service.ts - centralized reactive state via BehaviourSubject
+  - why BehaviourSuject: 
+   - reactive forms would be overkill since there is no validation
+   - inputs & Outputs are not scalable for multi-component interaction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+models:
+ - card-data.interface.ts - keeps the data structured and type-safe.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+directives:
+ - card-active.directive.ts - flexible and reusable way to manage active state.
