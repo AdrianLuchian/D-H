@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CardDataService } from 'src/app/services/card-data.service';
 
 @Component({
   selector: 'app-card-container',
   templateUrl: './card-container.component.html',
   styleUrls: ['./card-container.component.scss']
 })
-export class CardContainerComponent implements OnInit {
+export class CardContainerComponent {
+  cardData$ = this.cardDataService.cardData$;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor(private cardDataService: CardDataService) { }
 
 }
