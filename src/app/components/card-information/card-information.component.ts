@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-information',
@@ -8,4 +8,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class CardInformationComponent {
   @Input() title: string = "";
+  @Input() visible: boolean = false;
+
+  @Output() close = new EventEmitter<boolean>();
+  
+  closeCardInformation() {
+    this.close.emit(false);
+  }
 }

@@ -1,6 +1,16 @@
 <ng-container *ngIf="cardData$ | async as cardData">
     <div class="card-container">
-        <app-card [title]="cardData.title" [subtitle]="cardData.subtitle" [counter]="cardData.counter"></app-card>
-        <app-card-information [title]="cardData.containerTitle"></app-card-information>
+        <app-card appCardActive 
+            [isActive]="cardData.active" 
+            [title]="cardData.title"
+            [subtitle]="cardData.subtitle"
+            [counter]="cardData.counter"
+            (activeChange)="updateActive($event)">
+        </app-card>
+        <app-card-information 
+            [visible]="cardData.active"
+            [title]="cardData.containerTitle"
+            (close)="updateActive($event)">
+        </app-card-information>
     </div>
 </ng-container>
